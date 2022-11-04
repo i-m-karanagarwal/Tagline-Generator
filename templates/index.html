@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>TagLine Generator</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='bot.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='bot.png') }}" class="icon" />
+  <h3>Generate Tagline</h3>
+  <form action="/" method="post">
+    <input type="text" name="store" placeholder="Write a tagline for a" required />
+    <input type="submit" value="Generate Tagline" />
+  </form>
+  {% if result %}
+  <div class="result">TagLine: {{ result }}</div>
+  {% endif %}
+</body>
