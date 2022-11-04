@@ -25,3 +25,6 @@ def index():
 def generate_prompt(store):
     return """Write a tagline for a {}.""".format(
         store)
+
+if __name__ == "__main__":
+    app.run(debug = False, host = '0.0.0.0')
